@@ -25,7 +25,7 @@ ASWebAuthenticationSession *_asAuthenticationVC;
 
         ASWebAuthenticationSession* authenticationVC =
         [[ASWebAuthenticationSession alloc] initWithURL:requestURL
-                                   callbackURLScheme:redirectScheme
+                                   callbackURLScheme: [[NSURL URLWithString: redirectScheme] scheme]
                                    completionHandler:^(NSURL * _Nullable callbackURL,
                                                        NSError * _Nullable error) {
                                        CDVPluginResult *result;
