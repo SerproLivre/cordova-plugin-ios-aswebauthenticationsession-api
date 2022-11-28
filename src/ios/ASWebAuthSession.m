@@ -23,6 +23,8 @@ ASWebAuthenticationSession *_asAuthenticationVC;
         NSString* redirectScheme = [command.arguments objectAtIndex:0];
         NSURL* requestURL = [NSURL URLWithString:[command.arguments objectAtIndex:1]];
 
+        redirectScheme = [redirectScheme stringByAddingPercentEncodingWithAllowedCharacters: [NSCharacterSet URLHostAllowedCharacterSet]];
+
         ASWebAuthenticationSession* authenticationVC =
         [[ASWebAuthenticationSession alloc] initWithURL:requestURL
                                    callbackURLScheme: [[NSURL URLWithString: redirectScheme] scheme]

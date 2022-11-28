@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-ios-aswebauthenticationsession-api",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "Cordova Plugin for iOS 12/13 ASWebAuthenticationSession API",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jwelker110/cordova-plugin-ios-aswebauthenticationsession-api.git"
+    "url": "git+https://github.com/SerproLivre/cordova-plugin-ios-aswebauthenticationsession-api.git"
   },
   "keywords": [
     "ecosystem:cordova",
@@ -23,9 +23,9 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jwelker110/cordova-plugin-ios-aswebauthenticationsession-api.git/issues"
+    "url": "https://github.com/SerproLivre/cordova-plugin-ios-aswebauthenticationsession-api.git/issues"
   },
-  "homepage": "https://github.com/jwelker110/cordova-plugin-ios-aswebauthenticationsession-api.git#readme",
+  "homepage": "hhttps://github.com/SerproLivre/cordova-plugin-ios-aswebauthenticationsession-api.git#readme",
   "cordova": {
     "id": "cordova-plugin-ios-aswebauthenticationsession-api",
     "platforms": [
