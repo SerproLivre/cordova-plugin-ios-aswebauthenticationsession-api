@@ -17,6 +17,21 @@ ASWebAuthenticationSession *_asAuthenticationVC;
     [_asAuthenticationVC start];
 }
 
+-(void)cancel:(CDVInvokedUrlCommand *)command {
+    CDVPluginResult *result;
+
+    // Check if the authentication session is initialized and cancel it
+    if (_asAuthenticationVC) {
+        [_asAuthenticationVC cancel];
+        _asAuthenticationVC = nil;
+        result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString: @"Authentication session canceled"];
+    } else {
+        result = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"error"];
+    }
+
+    [self.commandDelegate sendPluginResult:result callbackId:command.callbackId];
+}
+
 - (void)start:(CDVInvokedUrlCommand *)command {
 
     if (@available(iOS 12.0, *)) {
